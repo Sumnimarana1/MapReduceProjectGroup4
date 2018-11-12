@@ -22,6 +22,7 @@ Dataset 2:
 300k #metoo tweets.
 
 ## Data Source
+- [DC Residential Properties](https://www.kaggle.com/christophercorrea/dc-residential-properties "Website for dataset")
 
 
 ## The Challenge
