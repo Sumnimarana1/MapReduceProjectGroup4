@@ -29,6 +29,6 @@ Dataset 2:
 
 
 ## Big Data Questions
-Average sales in a particular month.
+Sumnima Rana- Calculate Average sales in a particular month.
 
 ## Big Data Solutions
