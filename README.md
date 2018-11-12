@@ -29,6 +29,6 @@ Dataset 2:  https://data.world/rdeeds/350k-metoo-tweets
 
 
 ## Big Data Questions
-
+Maximum number of sales in a particular month.
 
 ## Big Data Solutions
