@@ -11,6 +11,15 @@
 
 ## Introduction
 
+We are using two datasets.
+
+Dataset 1:
+
+WashingtonDC realestate dataset.
+
+Dataset 2:
+
+300k #metoo tweets.
 
 ## Data Source
 
