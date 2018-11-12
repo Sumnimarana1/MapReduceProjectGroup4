@@ -13,11 +13,11 @@
 
 We are using two datasets.
 
-Dataset 1:
+Dataset 1: https://www.kaggle.com/christophercorrea/dc-residential-properties
 
 WashingtonDC realestate dataset.
 
-Dataset 2:
+Dataset 2:  https://data.world/rdeeds/350k-metoo-tweets
 
 300k #metoo tweets.
 
