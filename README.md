@@ -13,22 +13,16 @@
 
 We are using two datasets.
 
-<<<<<<< HEAD
+
 Dataset 1:
 WashingtonDC real estate dataset. We will calculate average number of bathrooms.
-Dataset 2:
-=======
-Dataset 1: https://www.kaggle.com/christophercorrea/dc-residential-properties
 
-WashingtonDC realestate dataset.
-
-Dataset 2:  https://data.world/rdeeds/350k-metoo-tweets
-
->>>>>>> a42e27ea774f30a7c59fb8a7897550559a9b4639
+Dataset 2: 
 300k #metoo tweets.
 
 ## Data Source
 - [DC Residential Properties](https://www.kaggle.com/christophercorrea/dc-residential-properties "Website for dataset")
+- [#metoo Dataset](https://data.world/rdeeds/350k-metoo-tweets "Website for #metoo dataset")
 
 
 ## The Challenge
