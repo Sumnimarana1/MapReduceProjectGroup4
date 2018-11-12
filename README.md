@@ -6,8 +6,8 @@
 
 
 ## Links
-- [Webpage]( "MapReduce Project group 4")
-- [Source]( "MapReduce Project group 4")
+- [Webpage](https://sumnimarana1.github.io/MapReduceProjectGroup4/ "MapReduce Project group 4")
+- [Source](https://githib.com/sumnimarana1/MapReduceProjectGroup4 "MapReduce Project group 4")
 
 ## Introduction
 
@@ -22,4 +22,3 @@
 
 
 ## Big Data Solutions
-
