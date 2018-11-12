@@ -7,7 +7,7 @@
 
 ## Links
 - [Webpage](https://sumnimarana1.github.io/MapReduceProjectGroup4/ "MapReduce Project group 4")
-- [Source](https://githib.com/sumnimarana1/MapReduceProjectGroup4 "MapReduce Project group 4")
+- [Source](https://github.com/sumnimarana1/MapReduceProjectGroup4 "MapReduce Project group 4")
 
 ## Introduction
 
