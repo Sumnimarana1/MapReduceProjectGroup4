@@ -14,11 +14,8 @@
 We are using two datasets.
 
 Dataset 1:
-
-WashingtonDC realestate dataset.
-
+WashingtonDC real estate dataset. We will calculate average number of bathrooms.
 Dataset 2:
-
 300k #metoo tweets.
 
 ## Data Source
