@@ -30,14 +30,14 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 ## The Challenge
 
-* 5 V’s for WashingtonDC Dataset
+**5 V’s for WashingtonDC Dataset**
 - Volume- There are 159K rows and 49 Col and size is 52.81 MB
 - Velocity- The last update for the Datasets was done 3 Months ago.
 - Value- This datas can be used to predict the property for the future business and help buyers and seller and know if its reasonable for you or not. 
 - Variety- Pretty structured with numerical and nominal(categorical)
 - Veracity- Downloaded from Kaggle dataset which is trusted site for the dataset.
 
-* 5 V’s for datasets
+**5 V’s for datasets**
 - Volume- The size of the 122.82 MB
 - Velocity- Using the API’s we can retrieve approximately 4000 live stream tweets in 30 seconds. The dataset is last updated on February 2018
 - Value- This dataset provide insight of impact of social media on society and the swing of the movement.
@@ -54,37 +54,37 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 ## Big Data Solutions
 
-- Kyle:
-Mapper Input: DC_Properties.csv 
-Mapper Output/Reducer Input: Price/ Square Feet
-Reducer Output: Total Cost / Total Square Feet
-Language: Python 
-Graph: Two bars to display ratio 
+**Kyle:**
+* Mapper Input: DC_Properties.csv 
+* Mapper Output/Reducer Input: Price/ Square Feet
+* Reducer Output: Total Cost / Total Square Feet
+* Language: Python 
+* Graph: Two bars to display ratio 
 
-- Sumnima:
-Mapper Input: DC_Properties.csv 
-Mapper Output/ Reducer Input:: SALEDATE / PRICE (price of most recent sales)
-Reducer Output: Month, Average
-Language: Python
-Use: Bar Chart for 12 Months to show the Average sale
+**Sumnima:**
+* Mapper Input: DC_Properties.csv 
+* Mapper Output/ Reducer Input:: SALEDATE / PRICE (price of most recent sales)
+* Reducer Output: Month, Average
+* Language: Python
+* Use: Bar Chart for 12 Months to show the Average sale
 
-- Pappu:
-Mapper Input: metootweets.csv 
-Mapper Output/ Reducer Input:Twitter Handle , Followers
-Reducer Output: Twitter Handle, count of Followers
-Language:Python
-Chart: Bar graph
+**Pappu:**
+* Mapper Input: metootweets.csv 
+* Mapper Output/ Reducer Input:Twitter Handle , Followers
+* Reducer Output: Twitter Handle, count of Followers
+* Language:Python
+* Chart: Bar graph
 
-- Krishna Veni:
-Mapper Input: metootweets.csv 
-Mapper Output/ Reducer Input: tweet id, Text
-Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
-Language:  Python
-Chart: Pie chart
+**Krishna Veni:**
+* Mapper Input: metootweets.csv 
+* Mapper Output/ Reducer Input: tweet id, Text
+* Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
+* Language:  Python
+* Chart: Pie chart
 
-- Goutham Neravetla
-Mapper Input: DC_Properties.csv 
-Mapper Input/Reducer Input: ID and BATHRM
-Reducer Output- bathroom and Count
-Language: Python
-Chart: Bar Chart
+**Goutham Neravetla:**
+* Mapper Input: DC_Properties.csv 
+* Mapper Input/Reducer Input: ID and BATHRM
+* Reducer Output- bathroom and Count
+* Language: Python
+* Chart: Bar Chart
