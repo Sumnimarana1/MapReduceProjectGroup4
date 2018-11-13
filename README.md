@@ -77,6 +77,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 **Krishna Veni:**
 * Mapper Input: metootweets.csv
+![alt text](![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png))
 * Mapper Output/ Reducer Input: tweet id, Text
 * Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
 * Language:  Python
