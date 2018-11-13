@@ -31,25 +31,25 @@ This is a data set which has tweets related to social movement metoo from Octobe
 ## The Challenge
 
 - 5 V’s for WashingtonDC Dataset
-Volume- There are 159K rows and 49 Col and size is 52.81 MB
-Velocity- The last update for the Datasets was done 3 Months ago.
-Value- This datas can be used to predict the property for the future business and help buyers and seller and know if its reasonable for you or not. 
-Variety- Pretty structured with numerical and nominal(categorical)
-Veracity- Downloaded from Kaggle dataset which is trusted site for the dataset.
+- Volume- There are 159K rows and 49 Col and size is 52.81 MB
+- Velocity- The last update for the Datasets was done 3 Months ago.
+- Value- This datas can be used to predict the property for the future business and help buyers and seller and know if its reasonable for you or not. 
+- Variety- Pretty structured with numerical and nominal(categorical)
+- Veracity- Downloaded from Kaggle dataset which is trusted site for the dataset.
 
 - 5 V’s for datasets
-Volume- The size of the 122.82 MB
-Velocity- Using the API’s we can retrieve approximately 4000 live stream tweets in 30 seconds. The dataset is last updated on February 2018
-Value- This dataset provide insight of impact of social media on society and the swing of the movement.
-Variety- This data is combination of text and numerical data
-Veracity- We downloaded it from DataWorld which is trusted site for the dataset and scrapped using twitter bot. So we think it is accurate.
+- Volume- The size of the 122.82 MB
+- Velocity- Using the API’s we can retrieve approximately 4000 live stream tweets in 30 seconds. The dataset is last updated on February 2018
+- Value- This dataset provide insight of impact of social media on society and the swing of the movement.
+- Variety- This data is combination of text and numerical data
+- Veracity- We downloaded it from DataWorld which is trusted site for the dataset and scrapped using twitter bot. So we think it is accurate.
 
 ## Big Data Questions
-Average number of full bathrooms - Goutham
-Average Price per square foot-Kyle Thomspon
-Calculating average sales in a particular month.- Sumnima Rana
-Find the top 5 handles.- Pappu Sah
-Sentiment of tweet (total  number of positive negative and neutral tweets)-  Krishna Veni Karri
+- Average number of full bathrooms - Goutham
+- Average Price per square foot-Kyle Thomspon
+- Calculating average sales in a particular month.- Sumnima Rana
+- Find the top 5 handles.- Pappu Sah
+- Sentiment of tweet (total  number of positive negative and neutral tweets)-  Krishna Veni Karri
 
 
 ## Big Data Solutions
