@@ -70,14 +70,47 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 **Pappu:**
 * Mapper Input: metootweets.csv 
+
+-------------------------------------------------------------------------------------------------------
+|id | insertdate |	twitterhandle	| followers |	hashtagsearched |	tweetid	| dateoftweet	| text	|
+-------------------------------------------------------------------------------------------------------
+| lastcontactdate | lasttimelinepull | lasttimetweetsanalyzed	| numberoftweetsanalysed	| numberoftweetsabouthash |	actualtwitterdate |
+--------------------------------------------------------------------------------------------------------------------------------------
+|2365116	| 2/8/2018 16:38	| comsatori	| 7216	| metoo |	9.62E+17 |	Thu Feb 08 22:36:52 +0000 2018 |Cuando esta se?ora habla es como |
+--------------------------------------------------------------------------------------------------------------------------------------
+| 1/1/2015 0:00 | 1/1/2015 0:00	| 1/1/2015 0:00	| 0 |	0 |
+---------------------------------------------------------
+
 * Mapper Output/ Reducer Input:Twitter Handle , Followers
+-----------------------------
+|	twitterhandle	| followers |
+-----------------------------
+| comsatori	| 7216	|
+
 * Reducer Output: Twitter Handle, count of Followers
 * Language:Python
 * Chart: Bar graph
 
 **Krishna Veni:**
-* Mapper Input: metootweets.csv 
+* Mapper Input: metootweets.csv
+
+-------------------------------------------------------------------------------------------------------
+|id | insertdate |	twitterhandle	| followers |	hashtagsearched |	tweetid	| dateoftweet	| text	|
+-------------------------------------------------------------------------------------------------------
+| lastcontactdate | lasttimelinepull | lasttimetweetsanalyzed	| numberoftweetsanalysed	| numberoftweetsabouthash |	actualtwitterdate |
+--------------------------------------------------------------------------------------------------------------------------------------
+|2365116	| 2/8/2018 16:38	| comsatori	| 7216	| metoo |	9.62E+17 |	Thu Feb 08 22:36:52 +0000 2018 |Cuando esta se?ora habla es como |
+--------------------------------------------------------------------------------------------------------------------------------------
+| 1/1/2015 0:00 | 1/1/2015 0:00	| 1/1/2015 0:00	| 0 |	0 |
+---------------------------------------------------------
+
 * Mapper Output/ Reducer Input: tweet id, Text
+--------------------------
+| tweetid	| dateoftweet |
+---------------------------
+|9.61731E+17	| Thu Feb 08 22:36:52 +0000 2018 |
+-----------------------------------------------
+
 * Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
 * Language:  Python
 * Chart: Pie chart
