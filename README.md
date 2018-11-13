@@ -72,6 +72,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 * Mapper Input: metootweets.csv
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
 * Mapper Output/ Reducer Input:Twitter Handle , Followers
+
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/sah_output.PNG)
 * Reducer Output: Twitter Handle, count of Followers
 * Language:Python
