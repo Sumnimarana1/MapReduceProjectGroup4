@@ -63,11 +63,11 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 **Sumnima:**
 * Mapper Input: DC_Properties.csv 
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.PNG)
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 * Mapper Output/ Reducer Input:: SALEDATE / PRICE (price of most recent sales)
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper2.PNG)
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/Mapper2.png)
 * Reducer Output: Month, Average
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/reducerO.PNG)
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/ReducerO.png)
 * Language: Python
 * Use: Bar Chart for 12 Months to show the Average sale
 
