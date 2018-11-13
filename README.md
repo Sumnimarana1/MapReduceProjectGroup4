@@ -69,8 +69,10 @@ This is a data set which has tweets related to social movement metoo from Octobe
 * Use: Bar Chart for 12 Months to show the Average sale
 
 **Pappu:**
-* Mapper Input: metootweets.csv 
+* Mapper Input: metootweets.csv
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
 * Mapper Output/ Reducer Input:Twitter Handle , Followers
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/sah_output.PNG)
 * Reducer Output: Twitter Handle, count of Followers
 * Language:Python
 * Chart: Bar graph
@@ -79,6 +81,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 * Mapper Input: metootweets.csv
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
 * Mapper Output/ Reducer Input: tweet id, Text
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/Reducer_input.PNG)
 * Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
 * Language:  Python
 * Chart: Pie chart
