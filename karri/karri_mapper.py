@@ -1,23 +1,31 @@
+#Author - Krishna Veni Karri
+#mapper code to collect live stream of tweets using Tweepy API and store them in a CSV File
+
 import tweepy
 import csv
-####input your credentials here
-consumer_key = 'cUl8PhvD2GBmBU7Oyu1yHcSzZ'
-consumer_secret = 'KE2BoICmlSaNr75VWZtlXL5eIjLyRYR7hdBfVHwNAUd0P3PyFc'
-access_token = '1008783848812023812-KkImFZ0o41ie8troJgwciwqLSSYfuw'
-access_token_secret = 'qWoTlhuXronTzCdDdTmPOoLK0tr2oRHu9P3uoR0somtJk'
+####input your twitter credentials here
+consumer_key = '*******************'
+consumer_secret = '**********'
+access_token = '********************'
+access_token_secret = '*******************'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth,wait_on_rate_limit=False)
-# Open/Create a file to append data
+
+# Open/Create a file in append mode
 csvFile = open('tweety.csv', 'a')
-#Use csv Writer
+
+#Use csv Writer to write tweets to a file
 csvWriter = csv.writer(csvFile)
+#take input from user: search word which is included in tweets and from date
 print('enter search string')
 hashtag = input()
 print(hashtag)
 print('enter date')
 date = input()
+
+#collect tweets and write them to csv
 for tweet in tweepy.Cursor(api.search,q = hashtag,count = 9000, lang="en", since = date).items():
     print(tweet.text)
     csvWriter.writerow([str(tweet.text.encode('utf-8'))])
