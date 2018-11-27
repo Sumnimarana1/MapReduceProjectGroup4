@@ -33,7 +33,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 **5 V’s for WashingtonDC Dataset**
 - Volume- There are 159K rows and 49 Col and size is 52.81 MB
 - Velocity- The last update for the Datasets was done 3 Months ago.
-- Value- This datas can be used to predict the property for the future business and help buyers and seller and know if its reasonable for you or not. 
+- Value- This datas can be used to predict the property for the future business and help buyers and seller and know if its reasonable for you or not.
 - Variety- Pretty structured with numerical and nominal(categorical)
 - Veracity- Downloaded from Kaggle dataset which is trusted site for the dataset.
 
@@ -45,24 +45,24 @@ This is a data set which has tweets related to social movement metoo from Octobe
 - Veracity- We downloaded it from DataWorld which is trusted site for the dataset and scrapped using twitter bot. So we think it is accurate.
 
 ## Big Data Questions
-- Average number of full bathrooms - Goutham
+- Count the number of houses that have more than or equal to 10 rooms and 7 full bathrooms  - Goutham
 - Average Price per square foot-Kyle Thomspon
 - Calculating average sales in a particular month.- Sumnima Rana
 - Find the top 5 handles.- Pappu Sah
-- Sentiment of tweet (total  number of positive negative and neutral tweets)-  Krishna Veni Karri
+- For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets-  Krishna Veni Karri
 
 
 ## Big Data Solutions
 
 **Kyle:**
-* Mapper Input: DC_Properties.csv 
+* Mapper Input: DC_Properties.csv
 * Mapper Output/Reducer Input: Price/ Square Feet
 * Reducer Output: Total Cost / Total Square Feet
-* Language: Python 
-* Graph: Two bars to display ratio 
+* Language: Python
+* Graph: Two bars to display ratio
 
 **Sumnima:**
-* Mapper Input: DC_Properties.csv 
+* Mapper Input: DC_Properties.csv
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 * Mapper Output/ Reducer Input:: MONTH / PRICE (price of most recent sales)
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperO.png)
@@ -91,8 +91,11 @@ This is a data set which has tweets related to social movement metoo from Octobe
 * Chart: Pie chart
 
 **Goutham Neravetla:**
-* Mapper Input: DC_Properties.csv 
-* Mapper Input/Reducer Input: ID and BATHRM
-* Reducer Output- bathroom and Count
+* Mapper Input: DC_Properties.csv
+![alt text](neravetla/images/neramapperinput.png)
+* Mapper Output/Reducer Input: BATHRM and ROOMS <br />
+![alt text](neravetla/images/nerareducerinput.png)
+* Reducer Output- Number of houses that have more than or equal to certain number of houses and bathrooms
+![alt text](neravetla/images/nerareduceroutput.png)
 * Language: Python
 * Chart: Bar Chart
