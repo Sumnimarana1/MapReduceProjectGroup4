@@ -1,9 +1,9 @@
 import sys
 
 #minimum number of rooms you need, you can change the number here
-minRooms = 11
+minRooms = 10
 #minimum number of bathrooms you want, you can change the number here
-minBathrooms = 8
+minBathrooms = 7
 
 #count number of houses that meet your requirement
 countHouses = 0
@@ -24,7 +24,7 @@ for line in sys.stdin:
                 countHouses += 1
 
 excludedHouses = totalHouses - countHouses
-print("Total houses being searched: {0}\n".format(totalHouses))
+print("\nTotal houses being searched: {0}\n".format(totalHouses))
 print("Search Criteria => Minimum number of rooms: {0}, Minimum number of full bathrooms: {1}\n".format(minRooms, minBathrooms))
 print("Number of houses that meet your requirement: {0}\n".format(countHouses))
 print("Number of houses that DON'T meet your requirement: {0}\n".format(excludedHouses))

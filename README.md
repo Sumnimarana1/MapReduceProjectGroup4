@@ -45,7 +45,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 - Veracity- We downloaded it from DataWorld which is trusted site for the dataset and scrapped using twitter bot. So we think it is accurate.
 
 ## Big Data Questions
-- Count the number of houses that have more than 10 rooms and 7 full bathrooms  - Goutham
+- Count the number of houses that have more than or equal to 10 rooms and 7 full bathrooms  - Goutham
 - Average Price per square foot-Kyle Thomspon
 - Calculating average sales in a particular month.- Sumnima Rana
 - Find the top 5 handles.- Pappu Sah
@@ -92,7 +92,10 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 **Goutham Neravetla:**
 * Mapper Input: DC_Properties.csv
+![alt text](neravetla/images/neramapperinput.png)
 * Mapper Input/Reducer Input: BATHRM and ROOMS
+![alt text](neravetla/images/nerareducerinput.png)
 * Reducer Output- Number of houses that have more than certain number of houses and bathrooms
+![alt text](neravetla/images/nerareduceroutput.png)
 * Language: Python
 * Chart: Bar Chart
