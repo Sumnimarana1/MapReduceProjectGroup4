@@ -1,9 +1,10 @@
+
 import sys
 
 #minimum number of rooms you need, you can change the number here
-minRooms = 11
+minRooms = 10
 #minimum number of bathrooms you want, you can change the number here
-minBathrooms = 8
+minBathrooms = 7
 
 #count number of houses that meet your requirement
 countHouses = 0
@@ -20,7 +21,7 @@ for line in sys.stdin:
             bathrooms = int(bathrooms)
             rooms = int(rooms)
             totalHouses += 1
-            if (bathrooms >= minBathrooms) and (rooms >= minRooms):
+            if (bathrooms > minBathrooms) and (rooms > minRooms):
                 countHouses += 1
 
 excludedHouses = totalHouses - countHouses
