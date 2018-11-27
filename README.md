@@ -49,7 +49,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 - Average Price per square foot-Kyle Thomspon
 - Calculating average sales in a particular month.- Sumnima Rana
 - Find the top 5 handles.- Pappu Sah
-- Sentiment of tweet (total  number of positive negative and neutral tweets)-  Krishna Veni Karri
+- For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets-  Krishna Veni Karri
 
 
 ## Big Data Solutions
