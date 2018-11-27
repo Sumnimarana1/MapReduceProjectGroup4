@@ -93,9 +93,9 @@ This is a data set which has tweets related to social movement metoo from Octobe
 **Goutham Neravetla:**
 * Mapper Input: DC_Properties.csv
 ![alt text](neravetla/images/neramapperinput.png)
-* Mapper Input/Reducer Input: BATHRM and ROOMS
+* Mapper Input/Reducer Input: BATHRM and ROOMS <br />
 ![alt text](neravetla/images/nerareducerinput.png)
-* Reducer Output- Number of houses that have more than certain number of houses and bathrooms
+* Reducer Output- Number of houses that have more than or equal to certain number of houses and bathrooms
 ![alt text](neravetla/images/nerareduceroutput.png)
 * Language: Python
 * Chart: Bar Chart
