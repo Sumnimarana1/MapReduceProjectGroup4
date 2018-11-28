@@ -15,12 +15,12 @@ totalHouses = 0
 for line in sys.stdin:
     data = line.strip().split("\t")
     if len(data) == 2:
-        bathrooms, rooms = data
+        bathrooms, rooms = data #assigning data to bathrooms and rooms key value pairs
         if(bathrooms != "BATHRM") and (rooms != "ROOMS"):
             bathrooms = int(bathrooms)
             rooms = int(rooms)
             totalHouses += 1
-            if (bathrooms >= minBathrooms) and (rooms >= minRooms):
+            if (bathrooms >= minBathrooms) and (rooms >= minRooms): #increments if bathroom and rooms are greater than or equal to spcified numbers
                 countHouses += 1
 
 excludedHouses = totalHouses - countHouses
