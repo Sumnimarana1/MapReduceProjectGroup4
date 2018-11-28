@@ -12,9 +12,10 @@ for line in inputFile:
             Month, Day, year = newdata
             if int(Month) < 10:
                 Month = "0" + Month
-            outputFile.write("{0}\t{1}".format(Month,PRICE))
-            print Month,"\t", PRICE
-            outputFile.write("\n")
+             if(PRICE != "" and float(PRICE) !=0):
+                outputFile.write("{0}\t{1}".format(Month,PRICE))
+                print Month,"\t", PRICE
+                outputFile.write("\n")
 print(count)
 inputFile.close()
 outputFile.close()
