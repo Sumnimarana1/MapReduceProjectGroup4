@@ -91,7 +91,8 @@ This is a data set which has tweets related to social movement metoo from Octobe
 * Chart: Pie chart
 
 **Goutham Neravetla:**
-* Mapper Input: DC_Properties.csv
+Challenge is faced: I tried to implement "For n roomed house, calculate the average number of bathrooms". For that, i need to sort the mapper output, but unforunately it is not sorting properly based on key value pairs. I worked on it for 6 hours get the file sorted properly. Since it didn't sort properly, my outputs from reducer program are wrong. So i went back to my original problem where i counted the number of houses with greater than or equal to certain number of rooms AND bathrooms. I tried my best. Maybe if i asked the right question early on, i would have got the right answer. This is best i can do in this limited time.
+* Mapper Input: DC.txt(it is a tab seperated file)
 ![alt text](neravetla/images/neramapperinput.png)
 * Mapper Output/Reducer Input: BATHRM and ROOMS <br />
 ![alt text](neravetla/images/nerareducerinput.png)
