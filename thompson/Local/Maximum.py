@@ -1,12 +1,12 @@
-#VREDUCE
+#Maximum
 
 #Open the File that was mapped too, to read from
 r = open("mapped.txt", "r")
 #Open a new file to write too
-w = open("reduced.txt","w")
+w = open("Maximum.txt","w")
 
-totprice = 0.0
-totsqr = 0.0
+#Set max to Zero.(This data has no negative values)
+max = 0.0
 
 #Read Through the read file line by line
 for line in r:
@@ -22,15 +22,13 @@ for line in r:
             sqrf = float(sqrf)           
             #Ensure price is Authentic field
             if price > 1:
-                #Aggregate total price and total square feet
-                totprice = totprice + price
-                totsqr = totsqr + sqrf
-#Calculate average price per square foot
-#Divide the total price by the total square feet
-avg = totprice/totsqr
-#Write the average price per
+                #Use conditional to determine min price per square foot
+                if(price/sqrf)>max:
+                    max = price/sqrf
+
+#Write the Maximum, price per
 #Square foot out to the new file
-w.write("{0}\n".format(avg))
+w.write("{0}\n".format(max))
 
 #Close both Files
 r.close()

@@ -1,4 +1,0 @@
-Total houses being searched: 158720
-Search Criteria => Minimum number of rooms: 11, Minimum number of full bathrooms: 8
-Number of houses that meet your requirement: 115
-Number of houses that DON'T meet your requirement: 158605
