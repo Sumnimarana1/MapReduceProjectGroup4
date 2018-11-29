@@ -59,24 +59,38 @@ This is a data set which has tweets related to social movement metoo from Octobe
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 
 I have three questions. For the distric of columbia what is the miximum, minimum and average price per square foot of housing.
-The data has lots and lots of feilds, so first I strip out Everything except price and square feet.
+
+Step 1: Fist I converted the cvs file to a txt file.
+
+Step 2: The data has lots and lots of feilds, I strip out Everything except price and square feet and write
+that to a new txt file "mapped.txt".
 
 * Mapper Output/Reducer Input: Price/ Square Feet
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/mapper.PNG)
 
-Then I ran the intermediate values of price and square feet through three seperate algorythms. 
+Step 3: Then I ran the intermediate values of price and square feet through three seperate algorythms.
+All three programs take input from the mapped txt file.
+All three programs convert the string input of price and sqrFeet into floats.
+Minimum runs through and finds the smallest number Price/sqrfeet for a single line
+Maximum runs through and finds the largwst number for Price/sqrfeet for a single line
+Average runs through aggregating all the price to total price, and all the sqrfeet for total square feet.
+Then outputs the totalPrice/totalSqrFeet.
 
 * Reducer Output: Total Cost / Total Square Feet
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/price_sqft.PNG)
 
 * Language: Python
 
-This whole process too me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors,
-tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space. 
+
+Problems: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
+Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space. 
 The data used had a lot of holes in it. Price only existed on properties that had ben sold recently enough to be on this record.
 Sqrfeet of the realestate was often just the value "1" when the actual number was unavailable or did not exist.
-The answers to my questions are most interesting when seen in comparison to one another. The disparity bewteen the average and the maximum is incredible.
-If I were to do this agian I would spend more time examining the furthest outlying value's and checking their validity. 
+
+Value of Answers: The answers to my questions are most interesting when seen in comparison to one another. The disparity bewteen the average and the maximum is incredible. This informatio would be valuable for someone buying or developing property in D.C
+Though should be supplemented with more information.
+
+How To improve: If I were to do this agian I would spend more time examining the furthest outlying value's and checking their validity. 
 It would also be good to know what percent of the data I did not use because it was not complete. 
 The minimum value for instance is less than a dollar per square foot, and while I can imagine reasons for that, it is also likely 
 that I used some invalid outlire data that does not reflect any physical property.
