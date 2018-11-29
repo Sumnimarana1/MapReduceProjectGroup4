@@ -62,7 +62,7 @@ I have three questions. For the distric of columbia what is the miximum, minimum
 The data has lots and lots of feilds, so first I strip out Everything except price and square feet.
 
 * Mapper Output/Reducer Input: Price/ Square Feet
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/mapper.PNG)
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/price_sqft.PNG)
 
 Then I ran the intermediate values of price and square feet through three seperate algorythms. 
 
