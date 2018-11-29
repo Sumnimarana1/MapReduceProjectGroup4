@@ -82,11 +82,11 @@ Then outputs the totalPrice/totalSqrFeet.
 * Language: Python
 
 ToRun: 
-1)Navigate to MapReduceProjectGroup4/thompson/Local
-2)Enter "py mapper.py" into the command line
-3)Enter "py Vreduce minimum.py maximum.py" into the comand line
-4)The maximum minimum and average price per square foot are now in the respective files.
-5)Use excel to visualize those numbers.
+*1)Navigate to MapReduceProjectGroup4/thompson/Local
+*2)Enter "py mapper.py" into the command line
+*3)Enter "py Vreduce minimum.py maximum.py" into the comand line
+*4)The maximum minimum and average price per square foot are now in the respective files.
+*5)Use excel to visualize those numbers.
 
 Problems: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
 Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space. 
