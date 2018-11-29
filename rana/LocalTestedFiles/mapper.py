@@ -19,7 +19,7 @@ for line in inputFile:
             if int(Month) < 10: # if the month is less that 10
                 Month = "0" + Month #adding the prefix in the month as 01,02..11,12
             #ignores the bad input( if the price is empty)
-             if(PRICE != "" and float(PRICE) !=0): 
+            if(PRICE != "" and float(PRICE) !=0): 
                 outputFile.write("{0}\t{1}".format(Month,PRICE)) # write to the file
                 print Month,"\t", PRICE
                 outputFile.write("\n")
