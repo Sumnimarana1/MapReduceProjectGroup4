@@ -54,7 +54,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 ## Big Data Solutions -DC_Properties
 
-###Kyle:Average Price per square foot-Kyle Thomspon###
+### Kyle:Average Price per square foot-Kyle Thomspon ###
 * Mapper Input: DC_Properties.csv
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 
@@ -103,7 +103,7 @@ that I used some invalid outlire data that does not reflect any physical propert
 I think if someone wanted to go further with this, they would need to check these numbers against a timeline like sumnima's and another one by year. The same thing could be done with median and mode, instead of average. 
 The location in D.C. should also be worked in, as addressess are available, to map out the pattern of these costs. 
 
-###Sumnima:Calculating average sales in a particular month###
+### Sumnima:Calculating average sales in a particular month ###
 * Mapper Input: DC_Properties.csv
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 * Mapper Output/ Reducer Input:: MONTH / PRICE (price of most recent sales)
@@ -115,7 +115,7 @@ The location in D.C. should also be worked in, as addressess are available, to m
 Visualization of Data:
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
  
-###Goutham Neravetla:###
+### Goutham Neravetla: ###
 Challenge is faced: I tried to implement "For n roomed house, calculate the average number of bathrooms". For that, i need to sort the mapper output, but unforunately it is not sorting properly based on key value pairs. I worked on it for 6 hours get the file sorted properly. Since it didn't sort properly, my outputs from reducer program are wrong. So i went back to my original problem where i counted the number of houses with greater than or equal to certain number of rooms AND bathrooms. I tried my best. Maybe if i asked the right question early on, i would have got the right answer. This is best i can do in this limited time.
 * Mapper Input: DC.txt(it is a tab seperated file)
 ![alt text](neravetla/images/neramapperinput.png)
@@ -127,7 +127,7 @@ Challenge is faced: I tried to implement "For n roomed house, calculate the aver
 * Chart: Bar Chart
 
 ## Big Data Solutions- MeToo Datasets
-###Pappu:Find the total number of followers for twitter Handler 'A'###
+### Pappu:Find the total number of followers for twitter Handler 'A' ###
 * Mapper Input: metootweets.csv
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
 * Mapper Output/ Reducer Input:Twitter Handle , Followers
@@ -137,7 +137,7 @@ Challenge is faced: I tried to implement "For n roomed house, calculate the aver
 * Language:Python
 * Chart: Bar graph
 
-###Krishna Veni:For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets###
+### Krishna Veni:For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets ###
 * Mapper Input: metootweets.csv
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
 * Mapper Output/ Reducer Input: tweet id, Text
