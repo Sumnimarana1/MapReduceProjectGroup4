@@ -92,6 +92,8 @@ The location in D.C. should also be worked in, as addressess are available, to m
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/ReducerO.png)
 * Language: Python
 * Use: Bar Chart for 12 Months to show the Average sale
+Visualization of Data:
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
 
 **Pappu:**
 * Mapper Input: metootweets.csv
