@@ -93,10 +93,10 @@ Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes 
 The data used had a lot of holes in it. Price only existed on properties that had ben sold recently enough to be on this record.
 Sqrfeet of the realestate was often just the value "1" when the actual number was unavailable or did not exist.
 
-Value of Answers: The answers to my questions are most interesting when seen in comparison to one another. The disparity bewteen the average and the maximum is incredible. This informatio would be valuable for someone buying or developing property in D.C
+Value of Answers: The answers to my questions are most interesting when seen in comparison to one another. The disparity between the average and the maximum is incredible. This information would be valuable for someone buying or developing property in D.C
 Though should be supplemented with more information.
 
-How To improve: If I were to do this agian I would spend more time examining the furthest outlying value's and checking their validity.
+How To improve: If I were to do this again I would spend more time examining the furthest outlying value's and checking their validity.
 It would also be good to know what percent of the data I did not use because it was not complete.
 The minimum value for instance is less than a dollar per square foot, and while I can imagine reasons for that, it is also likely
 that I used some invalid outlire data that does not reflect any physical property.
@@ -121,7 +121,7 @@ Visualization of Data:
 ![alt text](neravetla/images/mapperinput.png)
 * Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br />
 ![alt text](neravetla/images/mapperoutput_sortinput.png)
-* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the mapper.
+* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the reducer.
 ![alt text](neravetla/images/sortoutput_reducerinput.png)
 * Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.
 ![alt text](neravetla/images/reduceroutput.png)
