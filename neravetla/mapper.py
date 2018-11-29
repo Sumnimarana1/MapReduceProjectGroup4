@@ -1,3 +1,5 @@
+
+#This program reads each line, and prints the Bathroom and Rooms values in pair to the standard input
 import sys
 
 for line in sys.stdin:
