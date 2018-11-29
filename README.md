@@ -56,10 +56,19 @@ This is a data set which has tweets related to social movement metoo from Octobe
 
 **Kyle:**
 * Mapper Input: DC_Properties.csv
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
+I have three questions. For the distric of columbia what is the miximum, minimum and average price per square foot of housing.
+The data has lots and lots of feilds, so first I strip out Everything except price and square feet.
 * Mapper Output/Reducer Input: Price/ Square Feet
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Images/mapper.png)
+
+Then I ran the intermediate values of price and square feet through three seperate algorythms. 
 * Reducer Output: Total Cost / Total Square Feet
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Images/sqr_feet.png)
+
 * Language: Python
-* Graph: Two bars to display ratio
+
+* Graph: Bar Graph
 
 **Sumnima:**
 * Mapper Input: DC_Properties.csv
