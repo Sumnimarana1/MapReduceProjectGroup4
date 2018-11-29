@@ -1,30 +1,35 @@
 #opens MAPPED.txt in read mode
-readfile = open("SORTED.txt", "r")
+readfile2 = open("SORTED.txt", "r")
 #opens REDUCED.txt in write mode
-writefile = open("REDUCED.txt","w")
+writefile2 = open("REDUCED.txt","w")
+lines = readfile2.readlines()
 
 oldKey = None
 counter = 0
-sumOfRooms = 0
+sumOfBathrooms = 0
 
-writefile.write("{0}\t{1}\n".format("number_of_rooms","average_num_of_bathrooms"))
+writefile2.write("{0}\t{1}\n".format("number_of_rooms","average_num_of_bathrooms"))
 
-for line in readfile:
+for line in lines:
     data = line.strip().split("\t")
     if len(data) == 2:
-        bathrooms, rooms = data
-        numOfBath = bathrooms
-        if (bathrooms != "BATHRM") and (rooms != "ROOMS"):
+        rooms, bathrooms = data
+        #numOfBath = bathrooms
+        #if (bathrooms != "BATHRM") and (rooms != "ROOMS"):
+        #    continue
+        if counter == 0:
+            oldKey = rooms
+            counter = 1
+            sumOfBathrooms = sumOfBathrooms + int(bathrooms)
             continue
-        if (bathrooms == 0) or (rooms == 0):
+        if oldKey != rooms:
+            writefile2.write("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2)))
+            counter = 1
+            sumOfBathrooms = int(bathrooms)
+            oldKey = rooms
             continue
-        if oldKey and oldKey != bathrooms:
-            print "{0}\t{1}".format(oldKey, sumOfRooms/counter)
-            counter = 0
-            sumOfRooms = 0
-        oldKey = bathrooms
-        counter += 1
-        sumOfRooms += rooms
-writefile.write("{0}\t{1}\n".format(numOfBath, sumOfRooms/counter)
-writefile.close()
-readfile.close()
+        counter = counter + 1
+        sumOfBathrooms = sumOfBathrooms + int(bathrooms)
+writefile2.write("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2)))
+writefile2.close()
+readfile2.close()
