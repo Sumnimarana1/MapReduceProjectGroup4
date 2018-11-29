@@ -1,30 +1,30 @@
 import sys
 
-#minimum number of rooms you need, you can change the number here
-minRooms = 10
-#minimum number of bathrooms you want, you can change the number here
-minBathrooms = 7
 
-#count number of houses that meet your requirement
-countHouses = 0
-#number of houses that don't meet your requirement
-excludedHouses = 0
-#total number of houses
-totalHouses = 0
+oldKey = None
+counter = 0
+sumOfBathrooms = 0
+
+print("\n{0}\t{1}\n".format("number_of_rooms","average_num_of_bathrooms"))
 
 for line in sys.stdin:
     data = line.strip().split("\t")
     if len(data) == 2:
-        bathrooms, rooms = data #assigning data to bathrooms and rooms key value pairs
-        if(bathrooms != "BATHRM") and (rooms != "ROOMS"):
-            bathrooms = int(bathrooms)
-            rooms = int(rooms)
-            totalHouses += 1
-            if (bathrooms >= minBathrooms) and (rooms >= minRooms): #increments if bathroom and rooms are greater than or equal to spcified numbers
-                countHouses += 1
-
-excludedHouses = totalHouses - countHouses
-print("\nTotal houses being searched: {0}\n".format(totalHouses))
-print("Search Criteria => Minimum number of rooms: {0}, Minimum number of full bathrooms: {1}\n".format(minRooms, minBathrooms))
-print("Number of houses that meet your requirement: {0}\n".format(countHouses))
-print("Number of houses that DON'T meet your requirement: {0}\n".format(excludedHouses))
+        rooms, bathrooms = data
+        #numOfBath = bathrooms
+        #if (bathrooms != "BATHRM") and (rooms != "ROOMS"):
+        #    continue
+        if counter == 0:
+            oldKey = rooms
+            counter = 1
+            sumOfBathrooms = sumOfBathrooms + int(bathrooms)
+            continue
+        if oldKey != rooms:
+            print("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2)))
+            counter = 1
+            sumOfBathrooms = int(bathrooms)
+            oldKey = rooms
+            continue
+        counter = counter + 1
+        sumOfBathrooms = sumOfBathrooms + int(bathrooms)
+print("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2)))

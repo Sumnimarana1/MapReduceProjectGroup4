@@ -81,7 +81,7 @@ Then outputs the totalPrice/totalSqrFeet.
 
 * Language: Python
 
-ToRun: 
+ToRun:
 * 1)Navigate to MapReduceProjectGroup4/thompson/Local
 * 2)Enter "py mapper.py" into the command line
 * 3)Enter "py Vreduce minimum.py maximum.py" into the comand line
@@ -89,19 +89,19 @@ ToRun:
 * 5)Use excel to visualize those numbers.
 
 Challenges: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
-Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space. 
+Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space.
 The data used had a lot of holes in it. Price only existed on properties that had ben sold recently enough to be on this record.
 Sqrfeet of the realestate was often just the value "1" when the actual number was unavailable or did not exist.
 
 Value of Answers: The answers to my questions are most interesting when seen in comparison to one another. The disparity bewteen the average and the maximum is incredible. This informatio would be valuable for someone buying or developing property in D.C
 Though should be supplemented with more information.
 
-How To improve: If I were to do this agian I would spend more time examining the furthest outlying value's and checking their validity. 
-It would also be good to know what percent of the data I did not use because it was not complete. 
-The minimum value for instance is less than a dollar per square foot, and while I can imagine reasons for that, it is also likely 
+How To improve: If I were to do this agian I would spend more time examining the furthest outlying value's and checking their validity.
+It would also be good to know what percent of the data I did not use because it was not complete.
+The minimum value for instance is less than a dollar per square foot, and while I can imagine reasons for that, it is also likely
 that I used some invalid outlire data that does not reflect any physical property.
-I think if someone wanted to go further with this, they would need to check these numbers against a timeline like sumnima's and another one by year. The same thing could be done with median and mode, instead of average. 
-The location in D.C. should also be worked in, as addressess are available, to map out the pattern of these costs. 
+I think if someone wanted to go further with this, they would need to check these numbers against a timeline like sumnima's and another one by year. The same thing could be done with median and mode, instead of average.
+The location in D.C. should also be worked in, as addressess are available, to map out the pattern of these costs.
 
 ### Sumnima:Calculating average sales in a particular month ###
 * Mapper Input: DC_Properties.csv
@@ -114,15 +114,17 @@ The location in D.C. should also be worked in, as addressess are available, to m
 * Use: Bar Chart for 12 Months to show the Average sale
 Visualization of Data:
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
- 
+
 ### Goutham Neravetla: ###
-Challenge is faced: I tried to implement "For n roomed house, calculate the average number of bathrooms". For that, i need to sort the mapper output, but unforunately it is not sorting properly based on key value pairs. I worked on it for 6 hours get the file sorted properly. Since it didn't sort properly, my outputs from reducer program are wrong. So i went back to my original problem where i counted the number of houses with greater than or equal to certain number of rooms AND bathrooms. I tried my best. Maybe if i asked the right question early on, i would have got the right answer. This is best i can do in this limited time.
-* Mapper Input: DC.txt(it is a tab seperated file)
-![alt text](neravetla/images/neramapperinput.png)
-* Mapper Output/Reducer Input: BATHRM and ROOMS <br />
-![alt text](neravetla/images/nerareducerinput.png)
-* Reducer Output- Number of houses that have more than or equal to certain number of houses and bathrooms. You can also see my computer hostname that verifies i am using my own mac computer.
-![alt text](neravetla/images/nerareduceroutput.png)
+
+* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49!). Mapper is going to output ROOMS and BATHRM as key value pairs.
+![alt text](neravetla/images/mapperinput.png)
+* Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br />
+![alt text](neravetla/images/mapperoutput_sortinput.png)
+* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the mapper.
+![alt text](neravetla/images/sortoutput_reducerinput.png)
+* Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.
+![alt text](neravetla/images/reduceroutput.png)
 * Language: Python
 * Chart: Bar Chart
 
@@ -145,5 +147,3 @@ Challenge is faced: I tried to implement "For n roomed house, calculate the aver
 * Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
 * Language:  Python
 * Chart: Pie chart
-
-
