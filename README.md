@@ -48,13 +48,13 @@ This is a data set which has tweets related to social movement metoo from Octobe
 - Count the number of houses that have more than or equal to 10 rooms and 7 full bathrooms  - Goutham
 - Average Price per square foot-Kyle Thomspon
 - Calculating average sales in a particular month.- Sumnima Rana
-- Find the top 5 handles.- Pappu Sah
+- Find the total number of followers for twitter Handler 'A'- Pappu Sah
 - For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets-  Krishna Veni Karri
 
 
-## Big Data Solutions
+## Big Data Solutions -DC_Properties
 
-**Kyle:**
+###Kyle:Average Price per square foot-Kyle Thomspon###
 * Mapper Input: DC_Properties.csv
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 
@@ -82,13 +82,13 @@ Then outputs the totalPrice/totalSqrFeet.
 * Language: Python
 
 ToRun: 
-*1)Navigate to MapReduceProjectGroup4/thompson/Local
-*2)Enter "py mapper.py" into the command line
-*3)Enter "py Vreduce minimum.py maximum.py" into the comand line
-*4)The maximum minimum and average price per square foot are now in the respective files.
-*5)Use excel to visualize those numbers.
+* 1)Navigate to MapReduceProjectGroup4/thompson/Local
+* 2)Enter "py mapper.py" into the command line
+* 3)Enter "py Vreduce minimum.py maximum.py" into the comand line
+* 4)The maximum minimum and average price per square foot are now in the respective files.
+* 5)Use excel to visualize those numbers.
 
-Instruction: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
+Challenges: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
 Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space. 
 The data used had a lot of holes in it. Price only existed on properties that had ben sold recently enough to be on this record.
 Sqrfeet of the realestate was often just the value "1" when the actual number was unavailable or did not exist.
@@ -103,7 +103,7 @@ that I used some invalid outlire data that does not reflect any physical propert
 I think if someone wanted to go further with this, they would need to check these numbers against a timeline like sumnima's and another one by year. The same thing could be done with median and mode, instead of average. 
 The location in D.C. should also be worked in, as addressess are available, to map out the pattern of these costs. 
 
-**Sumnima:**
+###Sumnima:Calculating average sales in a particular month###
 * Mapper Input: DC_Properties.csv
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 * Mapper Output/ Reducer Input:: MONTH / PRICE (price of most recent sales)
@@ -114,27 +114,8 @@ The location in D.C. should also be worked in, as addressess are available, to m
 * Use: Bar Chart for 12 Months to show the Average sale
 Visualization of Data:
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
-
-**Pappu:**
-* Mapper Input: metootweets.csv
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
-* Mapper Output/ Reducer Input:Twitter Handle , Followers
-
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/sah_output.PNG)
-* Reducer Output: Twitter Handle, count of Followers
-* Language:Python
-* Chart: Bar graph
-
-**Krishna Veni:**
-* Mapper Input: metootweets.csv
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
-* Mapper Output/ Reducer Input: tweet id, Text
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/Reducer_input.PNG)
-* Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
-* Language:  Python
-* Chart: Pie chart
-
-**Goutham Neravetla:**
+ 
+###Goutham Neravetla:###
 Challenge is faced: I tried to implement "For n roomed house, calculate the average number of bathrooms". For that, i need to sort the mapper output, but unforunately it is not sorting properly based on key value pairs. I worked on it for 6 hours get the file sorted properly. Since it didn't sort properly, my outputs from reducer program are wrong. So i went back to my original problem where i counted the number of houses with greater than or equal to certain number of rooms AND bathrooms. I tried my best. Maybe if i asked the right question early on, i would have got the right answer. This is best i can do in this limited time.
 * Mapper Input: DC.txt(it is a tab seperated file)
 ![alt text](neravetla/images/neramapperinput.png)
@@ -144,3 +125,25 @@ Challenge is faced: I tried to implement "For n roomed house, calculate the aver
 ![alt text](neravetla/images/nerareduceroutput.png)
 * Language: Python
 * Chart: Bar Chart
+
+## Big Data Solutions- MeToo Datasets
+###Pappu:Find the total number of followers for twitter Handler 'A'###
+* Mapper Input: metootweets.csv
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
+* Mapper Output/ Reducer Input:Twitter Handle , Followers
+
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/sah_output.PNG)
+* Reducer Output: Twitter Handle, count of Followers
+* Language:Python
+* Chart: Bar graph
+
+###Krishna Veni:For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets###
+* Mapper Input: metootweets.csv
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
+* Mapper Output/ Reducer Input: tweet id, Text
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/Reducer_input.PNG)
+* Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
+* Language:  Python
+* Chart: Pie chart
+
+
