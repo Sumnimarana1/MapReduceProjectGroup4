@@ -88,7 +88,7 @@ ToRun:
 *4)The maximum minimum and average price per square foot are now in the respective files.
 *5)Use excel to visualize those numbers.
 
-Problems: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
+Instruction: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
 Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space. 
 The data used had a lot of holes in it. Price only existed on properties that had ben sold recently enough to be on this record.
 Sqrfeet of the realestate was often just the value "1" when the actual number was unavailable or did not exist.
