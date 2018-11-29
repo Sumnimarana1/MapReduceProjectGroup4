@@ -1,35 +1,35 @@
 #opens MAPPED.txt in read mode
-readfile = open("MAPPED.txt", "r")
+readfile2 = open("SORTED.txt", "r")
 #opens REDUCED.txt in write mode
-writefile = open("REDUCED.txt","w")
+writefile2 = open("REDUCED.txt","w")
+lines = readfile2.readlines()
 
-#minimum number of rooms you need, you can change the number here
-minRooms = 11
-#minimum number of bathrooms you want, you can change the number here
-minBathrooms = 8
+oldKey = None
+counter = 0
+sumOfBathrooms = 0
 
-#count number of houses that meet your requirement
-countHouses = 0
-#number of houses that don't meet your requirement
-excludedHouses = 0
-#total number of houses
-totalHouses = 0
+writefile2.write("{0}\t{1}\n".format("number_of_rooms","average_num_of_bathrooms"))
 
-for line in readfile:
+for line in lines:
     data = line.strip().split("\t")
     if len(data) == 2:
-        bathrooms, rooms = data
-        if(bathrooms != "BATHRM") and (rooms != "ROOMS"):
-            bathrooms = int(bathrooms)
-            rooms = int(rooms)
-            totalHouses += 1
-            if (bathrooms >= minBathrooms) and (rooms >= minRooms):
-                countHouses += 1
-
-excludedHouses = totalHouses - countHouses
-writefile.write("Total houses being searched: {0}\n".format(totalHouses))
-writefile.write("Search Criteria => Minimum number of rooms: {0}, Minimum number of full bathrooms: {1}\n".format(minRooms, minBathrooms))
-writefile.write("Number of houses that meet your requirement: {0}\n".format(countHouses))
-writefile.write("Number of houses that DON'T meet your requirement: {0}\n".format(excludedHouses))
-readfile.close()
-writefile.close()
+        rooms, bathrooms = data
+        #numOfBath = bathrooms
+        #if (bathrooms != "BATHRM") and (rooms != "ROOMS"):
+        #    continue
+        if counter == 0:
+            oldKey = rooms
+            counter = 1
+            sumOfBathrooms = sumOfBathrooms + int(bathrooms)
+            continue
+        if oldKey != rooms:
+            writefile2.write("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2)))
+            counter = 1
+            sumOfBathrooms = int(bathrooms)
+            oldKey = rooms
+            continue
+        counter = counter + 1
+        sumOfBathrooms = sumOfBathrooms + int(bathrooms)
+writefile2.write("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2)))
+writefile2.close()
+readfile2.close()
