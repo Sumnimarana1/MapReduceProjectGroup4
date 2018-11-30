@@ -68,11 +68,11 @@ that to a new txt file "mapped.txt".
 * Mapper Output/Reducer Input: Price/ Square Feet
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/mapper.PNG)
 
-Step 3: Then I ran the intermediate values of price and square feet through three seperate algorithms.
+Step 3: Then I ran the intermediate values of price and square feet through three separate algorithms.
 All three programs take input from the mapped txt file.
 All three programs convert the string input of price and sqrFeet into floats.
 Minimum runs through and finds the smallest number Price/sqrfeet for a single line
-Maximum runs through and finds the largwst number for Price/sqrfeet for a single line
+Maximum runs through and finds the largest number for Price/sqrfeet for a single line
 Average runs through aggregating all the price to total price, and all the sqrfeet for total square feet.
 Then outputs the totalPrice/totalSqrFeet.
 
@@ -86,7 +86,7 @@ ToRun:
 * 2)Enter "py mapper.py" into the command line
 * 3)Enter "py Vreduce minimum.py maximum.py" into the comand line
 * 4)The maximum minimum and average price per square foot are now in the respective files.
-* 5)Use excel to visualize those numbers.
+* 5)Use excel to visualise those numbers.
 
 Challenges: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
 Tabs and spaces would switch, and " " would sometimes read as a tab, sometimes as a space.
@@ -164,9 +164,8 @@ If I were to do this again, I would do it to see the price for the different yea
 
 * **Language:** <br />
 Python
-
 * **Mapper Input:**<br />
-DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
+DC.txt(it is a tab separated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
 ![alt text](neravetla/images/mapperinput.png)
 * **Mapper Output/Sorter Input:** <br />
 ROOMS and BATHROOMS. <br />
@@ -179,7 +178,7 @@ This sorts the mapper output and feeds it into the reducer.<br />
 ![alt text](neravetla/images/reduceroutput.png)
 
 * **Visualization of data:** <br />
-I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
+I converted the tablimited file to comma separated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
 ![alt text](neravetla/images/chart.png)
 
 * **To Run:**<br />
@@ -188,10 +187,10 @@ It is better to pipe the output from mapper to reducer. Looks cooler! You should
 If you can't run bash commands, there is still a way to run the code. Go to **neravetla/localtest**, run ```python mapper.py```. It should create **MAPPED.txt** file. Now run ```python sort.py```. This should create **SORTED.txt**. Now run ```python reducer.py```. This will create **REDUCED.txt**. You are done! If you want to convert **REDUCED.txt** to csv format, just run ```python csver.py```.
 
 * **Challenges:**<br />
-My main Challenge was asking right big data question. I asked the wrong question, and i ended up solving the wrong problem. Once i asked the right question, i struggled with sorting the data by key(number of rooms). Then sumnima told all i have to do is append "0" to keys that are less than 10. After that, it was pretty easy.
+My main Challenge was asking right big data question. I asked the wrong question, and i ended up solving the wrong problem. Once i asked the right question, i struggled with sorting the data by key(number of rooms). Then Sumnima told all i have to do is append "0" to keys that are less than 10. After that, it was pretty easy.
 
 * **Value:**<br />
-This answers the relationship between number of bathrooms and size of house(by number of rooms it has). It gives sense of how many bathrooms are thought to be adequate by realestate developers.
+This answers the relationship between number of bathrooms and size of house(by number of rooms it has). It gives sense of how many bathrooms are thought to be adequate by real estate developers.
 
 * **How to improve:**<br />
 I had to leave out a lot of records because they make no sense. I wish i had more accurate data. It would be interesting to see how many records i left out, and how that affected my results.
