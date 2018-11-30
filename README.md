@@ -89,9 +89,9 @@ ToRun:
 * 5)Use excel to visualize those numbers.
 
 Challenges: This whole process took me a couple hours. Most of the problems I faced were technical ones, like when switching between txt editors.
-Tabs and spaces would switch, and " " would sometimes read as a tab, somethimes as a space.
+Tabs and spaces would switch, and " " would sometimes read as a tab, sometimes as a space.
 The data used had a lot of holes in it. Price only existed on properties that had ben sold recently enough to be on this record.
-Sqrfeet of the realestate was often just the value "1" when the actual number was unavailable or did not exist.
+Sqrfeet of the real estate was often just the value "1" when the actual number was unavailable or did not exist.
 
 Value of Answers: The answers to my questions are most interesting when seen in comparison to one another. The disparity between the average and the maximum is incredible. This information would be valuable for someone buying or developing property in D.C
 Though should be supplemented with more information.
@@ -99,9 +99,9 @@ Though should be supplemented with more information.
 How To improve: If I were to do this again I would spend more time examining the furthest outlying value's and checking their validity.
 It would also be good to know what percent of the data I did not use because it was not complete.
 The minimum value for instance is less than a dollar per square foot, and while I can imagine reasons for that, it is also likely
-that I used some invalid outlire data that does not reflect any physical property.
-I think if someone wanted to go further with this, they would need to check these numbers against a timeline like sumnima's and another one by year. The same thing could be done with median and mode, instead of average.
-The location in D.C. should also be worked in, as addressess are available, to map out the pattern of these costs.
+that I used some invalid outlier data that does not reflect any physical property.
+I think if someone wanted to go further with this, they would need to check these numbers against a timeline like Sumnima's and another one by year. The same thing could be done with median and mode, instead of average.
+The location in D.C. should also be worked in, as addresses are available, to map out the pattern of these costs.
 
 ### Sumnima:Calculating average sales in a particular month ###
 * Mapper Input: DC_Properties.csv
@@ -117,16 +117,19 @@ Visualization of Data:
 
 ### Goutham Neravetla: ###
 
-* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49!). Mapper is going to output ROOMS and BATHRM as key value pairs.
-![alt text](neravetla/images/mapperinput.png)
+* Language: Python
+
+* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to output ROOMS and BATHRM as key value pairs.<br />
+![alt text](neravetla/images/mapperinput.png) <br />
 * Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br />
 ![alt text](neravetla/images/mapperoutput_sortinput.png)
-* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the reducer.
+* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the reducer.<br />
 ![alt text](neravetla/images/sortoutput_reducerinput.png)
-* Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.
+* Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.<br />
 ![alt text](neravetla/images/reduceroutput.png)
-* Language: Python
-* Chart: Bar Chart
+
+* Visualization of data: I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br />
+![alt text](neravetla/images/chart.png)
 
 ## Big Data Solutions- MeToo Datasets
 ### Pappu:Find the total number of followers for twitter Handler 'A' ###
