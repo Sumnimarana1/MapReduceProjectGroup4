@@ -119,7 +119,7 @@ Visualization of Data:
 
 * Language: Python
 
-* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to output ROOMS and BATHRM as key value pairs.<br /><br />
+* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
 ![alt text](neravetla/images/mapperinput.png)
 * Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br /><br />
 ![alt text](neravetla/images/mapperoutput_sortinput.png)
@@ -130,6 +130,9 @@ Visualization of Data:
 
 * Visualization of data: I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
 ![alt text](neravetla/images/chart.png)
+
+* To run:
+Change to **neravetla** folder. Then run ```cat DC.txt | python mapper.py | python sort.py | python reducer.py```
 
 ## Big Data Solutions- MeToo Datasets
 ### Pappu:Find the total number of followers for twitter Handler 'A' ###
