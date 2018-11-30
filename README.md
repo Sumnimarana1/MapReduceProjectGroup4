@@ -68,7 +68,11 @@ that to a new txt file "mapped.txt".
 * Mapper Output/Reducer Input: Price/ Square Feet
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/mapper.PNG)
 
+<<<<<<< HEAD
 Step 3: Then I ran the intermediate values of price and square feet through three separate algorithms.
+=======
+Step 3: Then I ran the intermediate values of price and square feet through three seperate algorithms.
+>>>>>>> bb8e6af1be7b3c458d4f27344cec9403f211dcc3
 All three programs take input from the mapped txt file.
 All three programs convert the string input of price and sqrFeet into floats.
 Minimum runs through and finds the smallest number Price/sqrfeet for a single line
@@ -164,8 +168,14 @@ If I were to do this again, I would do it to see the price for the different yea
 
 * **Language:** <br />
 Python
+<<<<<<< HEAD
 * **Mapper Input:**<br />
 DC.txt(it is a tab separated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
+=======
+
+* **Mapper Input:**<br />
+DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
+>>>>>>> bb8e6af1be7b3c458d4f27344cec9403f211dcc3
 ![alt text](neravetla/images/mapperinput.png)
 * **Mapper Output/Sorter Input:** <br />
 ROOMS and BATHROOMS. <br />
@@ -178,7 +188,11 @@ This sorts the mapper output and feeds it into the reducer.<br />
 ![alt text](neravetla/images/reduceroutput.png)
 
 * **Visualization of data:** <br />
+<<<<<<< HEAD
 I converted the tablimited file to comma separated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
+=======
+I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
+>>>>>>> bb8e6af1be7b3c458d4f27344cec9403f211dcc3
 ![alt text](neravetla/images/chart.png)
 
 * **To Run:**<br />
@@ -187,10 +201,17 @@ It is better to pipe the output from mapper to reducer. Looks cooler! You should
 If you can't run bash commands, there is still a way to run the code. Go to **neravetla/localtest**, run ```python mapper.py```. It should create **MAPPED.txt** file. Now run ```python sort.py```. This should create **SORTED.txt**. Now run ```python reducer.py```. This will create **REDUCED.txt**. You are done! If you want to convert **REDUCED.txt** to csv format, just run ```python csver.py```.
 
 * **Challenges:**<br />
+<<<<<<< HEAD
 My main Challenge was asking right big data question. I asked the wrong question, and i ended up solving the wrong problem. Once i asked the right question, i struggled with sorting the data by key(number of rooms). Then Sumnima told all i have to do is append "0" to keys that are less than 10. After that, it was pretty easy.
 
 * **Value:**<br />
 This answers the relationship between number of bathrooms and size of house(by number of rooms it has). It gives sense of how many bathrooms are thought to be adequate by real estate developers.
+=======
+My main Challenge was asking right big data question. I asked the wrong question, and i ended up solving the wrong problem. Once i asked the right question, i struggled with sorting the data by key(number of rooms). Then sumnima told all i have to do is append "0" to keys that are less than 10. After that, it was pretty easy.
+
+* **Value:**<br />
+This answers the relationship between number of bathrooms and size of house(by number of rooms it has). It gives sense of how many bathrooms are thought to be adequate by realestate developers.
+>>>>>>> bb8e6af1be7b3c458d4f27344cec9403f211dcc3
 
 * **How to improve:**<br />
 I had to leave out a lot of records because they make no sense. I wish i had more accurate data. It would be interesting to see how many records i left out, and how that affected my results.
