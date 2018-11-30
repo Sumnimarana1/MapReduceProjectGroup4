@@ -103,14 +103,15 @@ that I used some invalid outlier data that does not reflect any physical propert
 I think if someone wanted to go further with this, they would need to check these numbers against a timeline like Sumnima's and another one by year. The same thing could be done with median and mode, instead of average.
 The location in D.C. should also be worked in, as addresses are available, to map out the pattern of these costs.
 
-### Sumnima:Calculating average sales in a particular month ###
+### Sumnima: Calculating average sales in a particular month ###
+
 * **Language:** <br />
 Python
 
 * **Mapper Input:**<br />
 File : DC_Properties.csv as DC.txt
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/DataFile.png)
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/DataFile.PNG)
 
     - Step 1- The DC-Properties Data had 49 columns and it pretty huge in size. I changed the CSV into the txt file where I basically copied everything from the second line excluding the first line which had the label. After copying the data into the text File the columns were separated with tab delimiter which made it easy to work with.
 
