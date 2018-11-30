@@ -110,40 +110,50 @@ Python
 * **Mapper Input:**<br />
 File : DC_Properties.csv as DC.txt
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/DataTextFile.png)
  
-Step 1- The DC-Properties Data had 49 columns and it pretty huge in size. I changed the CSV into the txt file where I basically copied everything from the second line excluding the first line which had the label. After copying the data into the text File the columns were separated with tab delimiter which made it easy to work with. 
+ Step 1- The DC-Properties Data had 49 columns and it pretty huge in size. I changed the CSV into the txt file where I basically copied
+ everything from the second line excluding the first line which had the label. After copying the data into the text File the columns
+ were separated with tab delimiter which made it easy to work with. 
 
-Step 2- After trimming the data I selected the SALEDATE and PRICE. In the SALEDATE it consists of MONTH/ DAY/YEAR and TIME. So I had to strip it again at the ‘/’ and get the first index from it. So that I would only get the Months as 1, 2, 3, 4, 5…12. So as a result, I send the MONTH and PRICE in MapperOutput. 
-
+ Step 2- After trimming the data I selected the SALEDATE and PRICE. In the SALEDATE it consists of MONTH/ DAY/YEAR and TIME. So I had to
+ strip it again at the ‘/’ and get the first index from it. So that I would only get the Months as 1, 2, 3, 4, 5…12. So as a result, I
+ send the MONTH and PRICE in MapperOutput. 
  
 * **Mapper Output/Sorter Input:** <br />
  MONTH / PRICE (price of most recent sales)
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperO.png)
  
-Step 3- Sorting the Data. I wrote the sorting function and sending the result of Mapper Output to SORT it. After Sorting it, I figured it out that it basically sorted as 1,10,11,12, 2, 3…9. Cause it was reading as a String and it sorted it with the first character. 
-Fix--- Went back to the Mapper and added the prefix as ‘0’ in the MONTH if MONTH < 10. So while sorting it sorted correctly as 01, 02, 03, 04…..10, 11, 12.
+ Step 3- Sorting the Data. I wrote the sorting function and sending the result of Mapper Output to SORT it. After Sorting it, I figured
+ it out that it basically sorted as 1,10,11,12, 2, 3…9. Cause it was reading as a String and it sorted it with the first character. 
+ Fix--- Went back to the Mapper and added the prefix as ‘0’ in the MONTH if MONTH < 10. So while sorting it sorted correctly as 01, 02,
+ 03, 04…..10, 11, 12.
+ 
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperOutput-CORRECTED.png)
 
 * **Reducer Output:** <br />
   Month, Average
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/ReducerO.png)
  
-Step 4- Reducer. The Reducer gives the average of the SALE-PRICE – value by the MONTH- Key. Reducer takes the sorted Output and outputs it according to the Key- value pair. 
-
+ Step 4- Reducer. The Reducer gives the average of the SALE-PRICE – value by the MONTH- Key. Reducer takes the sorted Output and outputs
+ it according to the Key- value pair. 
+ 
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalepricebymonthCORRECTED.png)
 
 * **Chart Visualization:** <br />
 * Use: Bar Chart for 12 Months to show the Average sale
-Visualization of Data:
+ Visualization of Data:
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
  
 * **To Run:**<br />
-* Clone the Repo
-* Open the folder rana
-* Open the folder LocalTestedFiles
-* Right Click in the folder and Open wither Git Bash here or Open Command Window here as Administrator.
-* Type-- python mapper.py
-* Type-- python sort.py
-* Type-- python reducer.py
-* Output is seen in the file - ReducerOutput(avgbyMonth).txt
+ * Clone the Repo
+ * Open the folder **C:\44564\MapReduceProjectGroup4\rana**
+ * Open the folder **C:\44564\MapReduceProjectGroup4\rana\LocalTestedFiles**
+ * Right Click in the folder and Open wither **Git Bash here or Open Command Window here as Administrator**.
+ * run ```python mapper.py```
+ * run ```python sort.py```
+ * run ```python reducer.py```
+ * Output is seen in the file - **ReducerOutput(avgbyMonth).txt**
 
 * **Challenges:** <br />
 The biggest challenge was to figure out the correct mapper output. As I was working with the MONTH so I had to split it correctly in order to get just the MONTH. Also, figured out on adding the Prefix 0 in order to get it sorted correctly. 
