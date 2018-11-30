@@ -27,5 +27,5 @@ for line in sys.stdin:
             oldKey = rooms
             continue
         counter = counter + 1
-        sumOfBathrooms = sumOfBathrooms + int(bathrooms) #calculates average number of bathrooms per number of rooms of a house
-print("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2))) #prints to standard output
+        sumOfBathrooms = sumOfBathrooms + int(bathrooms)
+print("{0}\t{1}\n".format(oldKey, round(sumOfBathrooms/float(counter), 2))) #calculates average number of bathrooms per number of rooms of a house
