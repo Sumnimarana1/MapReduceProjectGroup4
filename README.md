@@ -129,7 +129,7 @@ File : DC_Properties.csv as DC.txt
  Fix--- Went back to the Mapper and added the prefix as ‘0’ in the MONTH if MONTH < 10. So while sorting it sorted correctly as 01, 02,
  03, 04…..10, 11, 12.
  
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperOutput- CORRECTED.png)
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperOutput-CORRECTED.png)
 
 * **Reducer Output:** <br />
   Month, Average
@@ -138,7 +138,7 @@ File : DC_Properties.csv as DC.txt
  Step 4- Reducer. The Reducer gives the average of the SALE-PRICE – value by the MONTH- Key. Reducer takes the sorted Output and outputs
  it according to the Key- value pair. 
  
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/Average Sale-price by month -CORRECTED.png)
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalepricebymonthCORRECTED.png)
 
 * **Chart Visualization:** <br />
 * Use: Bar Chart for 12 Months to show the Average sale
