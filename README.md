@@ -117,24 +117,36 @@ Visualization of Data:
 
 ### Goutham Neravetla: ###
 
-* Language: Python
+* **Language:** <br />
+Python
 
-* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
+* **Mapper Input:**<br />
+DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to take this file as input and output ROOMS and BATHRM as key value pairs.<br /><br />
 ![alt text](neravetla/images/mapperinput.png)
-* Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br /><br />
+* **Mapper Output/Sorter Input:** <br />
+ROOMS and BATHROOMS. <br />
 ![alt text](neravetla/images/mapperoutput_sortinput.png)
-* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the reducer.<br /><br />
+* **Sorter Output/Reducer Input:** <br />
+This sorts the mapper output and feeds it into the reducer.<br />
 ![alt text](neravetla/images/sortoutput_reducerinput.png)
-* Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.<br /><br />
+* **Reducer Output:** <br />
+ This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.<br /><br />
 ![alt text](neravetla/images/reduceroutput.png)
 
-* Visualization of data: I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
+* **Visualization of data:** <br />
+I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
 ![alt text](neravetla/images/chart.png)
 
-* To run:<br />
+* **Run:**<br />
 Change to **neravetla** folder. Then run ```cat DC.txt | python mapper.py | python sort.py | python reducer.py```<br />
 It is better to pipe the output from mapper to reducer. You should see the output on your screen. I am assuming you can run bash commands. <br />
 If you can't run bash commands, there is still a way to run the code. Go to **neravetla/localtest**, run ```python mapper.py```. It should create **MAPPED.txt** file. Now run ```python sort.py```. This should create **SORTED.txt**. Now run ```python reducer.py```. This will create **REDUCED.txt**. You are done! If you want to convert **REDUCED.txt** to csv format, just run ```python csver.py```.
+
+* **Challenges:**<br />
+My main Challenge was asking right big data question. I asked the wrong question, and i ended up solving the wrong problem. Once i asked the right question, i struggled with sorting the data by key(number of rooms). Then sumnima told all i have to do is append "0" to keys that are less than 10. After that, it was pretty easy.
+
+* **Value:**<br />
+This answers the relationship between number of bathrooms and size of house(by number of rooms it has). It gives sense of how many bathrooms are thought to be adequate by realestate developers.
 
 ## Big Data Solutions- MeToo Datasets
 ### Pappu:Find the total number of followers for twitter Handler 'A' ###
