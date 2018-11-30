@@ -45,7 +45,7 @@ This is a data set which has tweets related to social movement metoo from Octobe
 - Veracity- We downloaded it from DataWorld which is trusted site for the dataset and scrapped using twitter bot. So we think it is accurate.
 
 ## Big Data Questions
-- Count the number of houses that have more than or equal to 10 rooms and 7 full bathrooms  - Goutham
+- For every n number of rooms houses have, calculate the average number of bathrooms  - Goutham
 - Average Price per square foot-Kyle Thomspon
 - Calculating average sales in a particular month.- Sumnima Rana
 - Find the total number of followers for twitter Handler 'A'- Pappu Sah
@@ -111,40 +111,40 @@ Python
 File : DC_Properties.csv as DC.txt
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/DataTextFile.png)
- 
+
  Step 1- The DC-Properties Data had 49 columns and it pretty huge in size. I changed the CSV into the txt file where I basically copied
  everything from the second line excluding the first line which had the label. After copying the data into the text File the columns
- were separated with tab delimiter which made it easy to work with. 
+ were separated with tab delimiter which made it easy to work with.
 
  Step 2- After trimming the data I selected the SALEDATE and PRICE. In the SALEDATE it consists of MONTH/ DAY/YEAR and TIME. So I had to
  strip it again at the ‘/’ and get the first index from it. So that I would only get the Months as 1, 2, 3, 4, 5…12. So as a result, I
- send the MONTH and PRICE in MapperOutput. 
- 
+ send the MONTH and PRICE in MapperOutput.
+
 * **Mapper Output/Sorter Input:** <br />
  MONTH / PRICE (price of most recent sales)
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperO.png)
- 
+
  Step 3- Sorting the Data. I wrote the sorting function and sending the result of Mapper Output to SORT it. After Sorting it, I figured
- it out that it basically sorted as 1,10,11,12, 2, 3…9. Cause it was reading as a String and it sorted it with the first character. 
+ it out that it basically sorted as 1,10,11,12, 2, 3…9. Cause it was reading as a String and it sorted it with the first character.
  Fix--- Went back to the Mapper and added the prefix as ‘0’ in the MONTH if MONTH < 10. So while sorting it sorted correctly as 01, 02,
  03, 04…..10, 11, 12.
- 
+
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperOutput-CORRECTED.png)
 
 * **Reducer Output:** <br />
   Month, Average
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/ReducerO.png)
- 
+
  Step 4- Reducer. The Reducer gives the average of the SALE-PRICE – value by the MONTH- Key. Reducer takes the sorted Output and outputs
- it according to the Key- value pair. 
- 
+ it according to the Key- value pair.
+
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalepricebymonthCORRECTED.png)
 
 * **Chart Visualization:** <br />
 * Use: Bar Chart for 12 Months to show the Average sale
  Visualization of Data:
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
- 
+
 * **To Run:**<br />
  * Clone the Repo
  * Open the folder **C:\44564\MapReduceProjectGroup4\rana**
@@ -156,7 +156,7 @@ File : DC_Properties.csv as DC.txt
  * Output is seen in the file - **ReducerOutput(avgbyMonth).txt**
 
 * **Challenges:** <br />
-The biggest challenge was to figure out the correct mapper output. As I was working with the MONTH so I had to split it correctly in order to get just the MONTH. Also, figured out on adding the Prefix 0 in order to get it sorted correctly. 
+The biggest challenge was to figure out the correct mapper output. As I was working with the MONTH so I had to split it correctly in order to get just the MONTH. Also, figured out on adding the Prefix 0 in order to get it sorted correctly.
 
 * **Value:** <br />
 As this approach gave the average of the SALE_PRICE according to the Month. This data would be very useful for the Real State Business for the analysis. Which Month has the highest sell Price? What’s the fluctuation of the SALE_PRICE overall in 12 months? It is noticed that the April and November has the higher number of Sales. This shows that the people are most likely to buy and sell house during that time of the year. If someone is willing to sell and buy house, they can get good deals and more options in those time of the year. The Real Estate business could throw most of their advertisement during those time of the year. This would be a good approach for a business to know their average sales in every months and could figure out plans and advertisement strategies to flourish their business.
