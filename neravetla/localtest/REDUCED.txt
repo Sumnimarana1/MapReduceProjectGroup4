@@ -1,3 +1,4 @@
+number_of_rooms	average_num_of_bathrooms
 01	1.02
 02	1.01
 03	1.03
