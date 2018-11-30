@@ -119,16 +119,16 @@ Visualization of Data:
 
 * Language: Python
 
-* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to output ROOMS and BATHRM as key value pairs.<br />
-![alt text](neravetla/images/mapperinput.png) <br />
-* Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br />
+* Mapper Input: DC.txt(it is a tab seperated file). It has a lot of fields(49 total!). Mapper is going to output ROOMS and BATHRM as key value pairs.<br /><br />
+![alt text](neravetla/images/mapperinput.png)
+* Mapper Output/Sorter Input: ROOMS and BATHROOMS. <br /><br />
 ![alt text](neravetla/images/mapperoutput_sortinput.png)
-* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the reducer.<br />
+* Sorter Output/Reducer Input: This sorts the mapper output and feeds it into the reducer.<br /><br />
 ![alt text](neravetla/images/sortoutput_reducerinput.png)
-* Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.<br />
+* Reducer Output- This takes in sorted data and does reduce operation. In this case, for houses in DC area with n rooms, it will get average number of bathrooms.<br /><br />
 ![alt text](neravetla/images/reduceroutput.png)
 
-* Visualization of data: I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br />
+* Visualization of data: I converted the tablimited file to comma seperated file using a python program i wrote. Then opened it in excel to create the lined scatterplot.<br /><br />
 ![alt text](neravetla/images/chart.png)
 
 ## Big Data Solutions- MeToo Datasets
