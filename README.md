@@ -68,7 +68,7 @@ that to a new txt file "mapped.txt".
 * Mapper Output/Reducer Input: Price/ Square Feet
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/thompson/Pictures/mapper.PNG)
 
-Step 3: Then I ran the intermediate values of price and square feet through three seperate algorythms.
+Step 3: Then I ran the intermediate values of price and square feet through three seperate algorithms.
 All three programs take input from the mapped txt file.
 All three programs convert the string input of price and sqrFeet into floats.
 Minimum runs through and finds the smallest number Price/sqrfeet for a single line
