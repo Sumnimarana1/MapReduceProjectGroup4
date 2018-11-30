@@ -132,7 +132,9 @@ Visualization of Data:
 ![alt text](neravetla/images/chart.png)
 
 * To run:
-Change to **neravetla** folder. Then run ```cat DC.txt | python mapper.py | python sort.py | python reducer.py```
+Change to **neravetla** folder. Then run ```cat DC.txt | python mapper.py | python sort.py | python reducer.py```<br />
+It is better to pipe the output from mapper to reducer. You should see the output on your screen. I am assuming you can run bash commands. <br />
+If you can't run bash commands, there is still a way to run the code. Go to **neravetla/localtest**, run ```python mapper.py```. It should create **MAPPED.txt** file. Now run ```python sort.py```. This should create ***SORTED.txt**. Now run ```python reducer.py```. This will create **REDUCED.txt**. You are done! If you want to convert **REDUCED.txt**, just run ```python csver.py```.
 
 ## Big Data Solutions- MeToo Datasets
 ### Pappu:Find the total number of followers for twitter Handler 'A' ###
