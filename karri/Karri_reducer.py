@@ -29,9 +29,9 @@ csvWriter = csv.writer(csvFile)
 
 # write the the values in csv file
 
-csvWriter.writerow(["Number of positive tweets ", positive_counter])
-csvWriter.writerow(["Number of negative tweets ", negative_counter])
-csvWriter.writerow(["Number of neutral tweets ", neutral_counter])
+csvWriter.writerow(["Positive", positive_counter])
+csvWriter.writerow(["Negative", negative_counter])
+csvWriter.writerow(["Neutral", neutral_counter])
 
 print("REDUCER JOB - SUCCESS!!\nPLEASE SEE THE RESULTS IN Senti.csv FILE")
 csvFile.close()
