@@ -237,7 +237,7 @@ Step 4- Reducer gives total count. It takes the sorted Output and outputs it acc
 * **Chart Visualization:
 * the total number of followers for twitter Handler 'A'
    Visualization of Data:
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/sah/images/chart.PNG)
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/sah/images/chart.png)
 
 * **To Run:**
     - Clone the Repo
