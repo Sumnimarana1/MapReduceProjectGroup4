@@ -2,7 +2,8 @@
 - Course: BigData
 - Project number: 4
 - Developer Pair 1- Kyle Thompson, Goutham Neravetla, Sumnima Rana
-- Developer Pair 2- Krishna Veni Karri, Pappu Shah
+- Developer Pair 2- Pappu Shah
+- Developer Pair 3-Krishna Veni Karri
 
 
 ## Links
@@ -11,12 +12,13 @@
 
 ## Introduction
 
-We are using two datasets in our project.
-One is real estate data which is structured data and the other is unstructured data related to social movement metoo.
+We are using two static datasets, and stream of data in our project.
+Out of two datasets, one is real estate data which is structured data and the other is unstructured data related to social movement metoo.
 
 Dataset 1: WashingtonDC real estate dataset
 Dataset 2: 300k #metoo tweets.
 
+Stream of data used in this project is collection of tweets retrived from twitter by the user running the map reduce job.
 
 
 ## Data Source
@@ -26,7 +28,7 @@ This datasets has analysis showing real property information, including most rec
 - [#metoo Dataset](https://data.world/rdeeds/350k-metoo-tweets)
 This is a data set which has tweets related to social movement metoo from October 2017 to february 2018. Data is in CSV format and has 16 columns. Some of the attributes are tweet_id, tweet text, timestamp of the tweet, handle etc.
 
-
+-Twitter : Data is extracted by performing text mining. Historic stream of tweets of past 7-9 days related to any topic can be retrived using public twitter API.
 
 ## The Challenge
 
@@ -37,12 +39,19 @@ This is a data set which has tweets related to social movement metoo from Octobe
 - Variety- Pretty structured with numerical and nominal(categorical)
 - Veracity- Downloaded from Kaggle dataset which is trusted site for the dataset.
 
-**5 V’s for datasets**
+**5 V’s for metoo datasets**
 - Volume- The size of the 122.82 MB
 - Velocity- Using the API’s we can retrieve approximately 4000 live stream tweets in 30 seconds. The dataset is last updated on February 2018
 - Value- This dataset provide insight of impact of social media on society and the swing of the movement.
 - Variety- This data is combination of text and numerical data
 - Veracity- We downloaded it from DataWorld which is trusted site for the dataset and scrapped using twitter bot. So we think it is accurate.
+
+**5 V's for stream of tweets**
+- Volume- The size of the file we store retrived tweets can grow exponentially. I this case I have a file o fsize 1 MB and it keeps increasing as we continue retriving tweets and store.  
+- Velocity- Using the API’s we can retrieve approximately 4000 live stream tweets in 30 seconds.
+- Value- Twitter data constitutes a rich source that can be used for capturing information about any topic imaginable. This data can be used in different use cases such as finding trends related to a specific keyword, measuring brand sentiment, and gathering feedback about new products and services.
+- Variety- There are many attributes for a tweet object. In this case we are using only text for our mapreduce job. So it is a text data
+- Veracity- Since the data is from twitter it is 100 percent trusted.
 
 ## Big Data Questions
 - For every n number of rooms houses have, calculate the average number of bathrooms  - Goutham
@@ -260,10 +269,18 @@ If I were to do this again, I would do the maximum number of tweets by single pe
 
 
 ### Krishna Veni:For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets ###
-* Mapper Input: metootweets.csv
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_input.PNG)
-* Mapper Output/ Reducer Input: tweet id, Text
+* **Language:** 
+Python
+
+* **Mapper Input:**
+Input is entered by the user to enter search string and 'from date' to retrive tweets
+steps to executer mapper.py:
+step1- run mapper.py file
+step 2- enter search string and date as prompted. After the successfull retrival of data, a message is prompted in the terminal
+step 3- open tweety.txt file to see the mapper output result which has sentiment and tweet text.
+![alt text]
+* Mapper Output/ Reducer Input: sentiment, Text
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/Reducer_input.PNG)
 * Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
-* Language:  Python
-* Chart: Pie chart
+
+* Chart: Bar chart
