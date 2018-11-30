@@ -1,26 +1,37 @@
+# author - Krishna Veni Karri
+# reducer code to find sentiment count of tweets
 
-#author - Krishna Veni Karri
-#reducer code to find sentiment count of tweets using textblob API
+import csv
+# open mapper output for reducer input
+mapper_output = open("tweety.txt", "r")
 
-from textblob import TextBlob
-#open mapper_input file in read mode
-input = open("tweety.csv", "r")
+positive_counter = 0
+negative_counter = 0
+neutral_counter = 0
 
-positive_count = 0
-negative_count = 0
-neutral_count = 0
-#read each  line from file and find the sentiment of the text and if hit increase the respective count
-for i in input.readlines():
-    result = TextBlob(i)
-    #print(result.sentiment)
-    if result.sentiment.polarity > 0:
-        positive_count = positive_count + 1
-    elif result.sentiment.polarity == 0:
-        neutral_count = neutral_count + 1
-    else:
-        negative_count = negative_count + 1
+# for each line in teh file check the first value which is sentiment and increment respective counter
+for line in mapper_output:
+    data = line.strip().split(',')
+    if len(data) != 2:
+        continue
+    sentiment, text = data
+    if sentiment == "negative":
+        negative_counter = negative_counter + 1
+    if sentiment == "positive":
+        positive_counter = positive_counter + 1
+    if sentiment == "neutral":
+        neutral_counter = neutral_counter + 1
 
-#print the result
-print("Number of positive tweets ", positive_count)
-print("Number of negative tweets ", negative_count)
-print("Number of neutral tweets ", neutral_count)
+# open file senti.csv
+
+csvFile = open("senti.csv", "w")
+csvWriter = csv.writer(csvFile)
+
+# write the the values in csv file
+
+csvWriter.writerow(["Number of positive tweets ", positive_counter])
+csvWriter.writerow(["Number of negative tweets ", negative_counter])
+csvWriter.writerow(["Number of neutral tweets ", neutral_counter])
+
+print("REDUCER JOB - SUCCESS!!\nPLEASE SEE THE RESULTS IN Senti.csv FILE")
+csvFile.close()
