@@ -275,12 +275,17 @@ Python
 * **Mapper Input:**
 Input is entered by the user to enter search string and 'from date' to retrive tweets
 steps to executer mapper.py:
-step1- run mapper.py file
+step1- navigate to karri directory and run mapper.py file
 step 2- enter search string and date as prompted. After the successfull retrival of data, a message is prompted in the terminal
-step 3- open tweety.txt file to see the mapper output result which has sentiment and tweet text.
-![alt text]
-* Mapper Output/ Reducer Input: sentiment, Text
-![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/Reducer_input.PNG)
-* Reducer Output::  sentiment, count ({positive, count}, {negative, count}, {neutral, count})
+* **Mapper Input/ Reducer Input:**
+the output of mapper will be sentiment and tweet text
+Navigate to Karri directory and open tweety.txt file to see the mapper output result. This is the sample of the result.
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_output_reducer_input.PNG)
+ 
+* **Reducer Output:**
+Reducer takes the tweety.py file generated in the above step and performs the sum function based on the sentiment type and gives us the result, sentiment, count ({positive, count}, {negative, count}, {neutral, count})
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/reducer_output.PNG)
 
-* Chart: Bar chart
+* **Chart Visualization:**
+I used bar chart to represent the reducer result. This chart shows the response of people on any topic we search for.
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/chart.PNG)
