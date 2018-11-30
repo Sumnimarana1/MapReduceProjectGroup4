@@ -148,6 +148,9 @@ My main Challenge was asking right big data question. I asked the wrong question
 * **Value:**<br />
 This answers the relationship between number of bathrooms and size of house(by number of rooms it has). It gives sense of how many bathrooms are thought to be adequate by realestate developers.
 
+* **How to improve:**<br />
+I had to leave out a lot of records because they make no sense. I wish i had more accurate data. It would be interesting to see how many records i left out, and how that affected my results.
+
 ## Big Data Solutions- MeToo Datasets
 ### Pappu:Find the total number of followers for twitter Handler 'A' ###
 * Mapper Input: metootweets.csv
