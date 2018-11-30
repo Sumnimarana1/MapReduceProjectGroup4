@@ -104,16 +104,56 @@ I think if someone wanted to go further with this, they would need to check thes
 The location in D.C. should also be worked in, as addresses are available, to map out the pattern of these costs.
 
 ### Sumnima:Calculating average sales in a particular month ###
-* Mapper Input: DC_Properties.csv
- ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
-* Mapper Output/ Reducer Input:: MONTH / PRICE (price of most recent sales)
+* **Language:** <br />
+Python
+
+* **Mapper Input:**<br />
+File : DC_Properties.csv as DC.txt
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
+ 
+Step 1- The DC-Properties Data had 49 columns and it pretty huge in size. I changed the CSV into the txt file where I basically copied everything from the second line excluding the first line which had the label. After copying the data into the text File the columns were separated with tab delimiter which made it easy to work with. 
+
+Step 2- After trimming the data I selected the SALEDATE and PRICE. In the SALEDATE it consists of MONTH/ DAY/YEAR and TIME. So I had to strip it again at the ‘/’ and get the first index from it. So that I would only get the Months as 1, 2, 3, 4, 5…12. So as a result, I send the MONTH and PRICE in MapperOutput. 
+
+ 
+* **Mapper Output/Sorter Input:** <br />
+ MONTH / PRICE (price of most recent sales)
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/MapperO.png)
-* Reducer Output: Month, Average
+ 
+Step 3- Sorting the Data. I wrote the sorting function and sending the result of Mapper Output to SORT it. After Sorting it, I figured it out that it basically sorted as 1,10,11,12, 2, 3…9. Cause it was reading as a String and it sorted it with the first character. 
+Fix--- Went back to the Mapper and added the prefix as ‘0’ in the MONTH if MONTH < 10. So while sorting it sorted correctly as 01, 02, 03, 04…..10, 11, 12.
+
+* **Reducer Output:** <br />
+  Month, Average
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/ReducerO.png)
-* Language: Python
+ 
+Step 4- Reducer. The Reducer gives the average of the SALE-PRICE – value by the MONTH- Key. Reducer takes the sorted Output and outputs it according to the Key- value pair. 
+
+
+* **Chart Visualization:** <br />
 * Use: Bar Chart for 12 Months to show the Average sale
 Visualization of Data:
  ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/AverageSalebyMonthChart.PNG)
+ 
+* **To Run:**<br />
+* Clone the Repo
+* Open the folder rana
+* Open the folder LocalTestedFiles
+* Right Click in the folder and Open wither Git Bash here or Open Command Window here as Administrator.
+* Type-- python mapper.py
+* Type-- python sort.py
+* Type-- python reducer.py
+* Output is seen in the file - ReducerOutput(avgbyMonth).txt
+
+* **Challenges:** <br />
+The biggest challenge was to figure out the correct mapper output. As I was working with the MONTH so I had to split it correctly in order to get just the MONTH. Also, figured out on adding the Prefix 0 in order to get it sorted correctly. 
+
+* **Value:** <br />
+As this approach gave the average of the SALE_PRICE according to the Month. This data would be very useful for the Real State Business for the analysis. Which Month has the highest sell Price? What’s the fluctuation of the SALE_PRICE overall in 12 months? It is noticed that the April and November has the higher number of Sales. This shows that the people are most likely to buy and sell house during that time of the year. If someone is willing to sell and buy house, they can get good deals and more options in those time of the year. The Real Estate business could throw most of their advertisement during those time of the year. This would be a good approach for a business to know their average sales in every months and could figure out plans and advertisement strategies to flourish their business.
+
+* **How to improve:** <br />
+If I were to do this again, I would do it to see the price for the different years and how the price changes within those years. I wanted see overall changes in the sale price with different years. With the year we might come to the conclusion where we could say about how much price have increased and predict on how much the price will be for the future. We can view it was a line graph and find out the price increase or drop within different years. Like Kyle mentioned, definitely we could view those price fluctuation within the years, month and location in D.C.
+
 
 ### Goutham Neravetla: ###
 
