@@ -208,7 +208,56 @@ I had to leave out a lot of records because they make no sense. I wish i had mor
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/sah_output.PNG)
 * Reducer Output: Twitter Handle, count of Followers
 * Language:Python
-* Chart: Bar graph
+
+
+### Pappu Sah: Find the total number of followers for twitter Handler 'A' ###
+
+* **Language:** 
+Python
+
+* **Mapper Input:**
+File : DC_Properties.csv as DC.txt
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/mapper.png)
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/rana/images/DataFile.PNG)
+
+Step 1- I changed the CSV into the txt file. After copying the data into the text File the columns were separated into 6 different part which made it easy to work with. 
+Step 2- In mapper, I just trim the data I selected twitter handle and followers. Then I strip it again at the ‘/’.
+Step 3- I Sort the Data. After that, I wrote the sorting function and sending the result of Mapper Output to SORT it. 
+Step 4- Reducer gives total count. It takes the sorted Output and outputs it according to the Key- value pair. 
+*Mapper
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/sah/images/mapper.png)
+*Reducer 
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/sah/images/reducer.png)
+*sort
+![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/sah/images/sort.png)
+
+
+
+
+* **Chart Visualization:
+* the total number of followers for twitter Handler 'A'
+   Visualization of Data:
+ ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/sah/images/chart.PNG)
+
+* **To Run:**
+    - Clone the Repo
+    - Open the folder **C:\44564\Big Data\MapReduceProjectGroup4\MapReduceProjectGroup4\sah**
+     - Right Click in the folder and Open wither **Git Bash here or Open Command Window here as Administrator**.
+             -python mapper.py
+             -python sort.py
+             -python reducer.py
+             -Output is seen in the file - **ReducerOutput(ReducerOutputCountFollowers).txt**
+
+* **Challenges:** 
+The challenge for me to figure out the correct mapper and reducer code. At, first I didn’t know how sort the file. It give me little trouble but after couple hour I figure out.
+
+* **Value:** 
+As we know that lots of people using twitters, so I just find most number of handler twitter by A.
+
+* **How to improve:** 
+If I were to do this again, I would do the maximum number of tweets by single people because I want to see how many tweets done by people in single day and there craziness.  
+
+
 
 ### Krishna Veni:For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets ###
 * Mapper Input: metootweets.csv
