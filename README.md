@@ -268,17 +268,17 @@ If I were to do this again, I would do the maximum number of tweets by single pe
 
 
 
-### Krishna Veni:For each tweet find Sentiment and then calculate total number of positive negative and neutral tweets ###
+### Krishna Veni:For each tweet find Sentiment and then calculate total number of positive, negative and neutral tweets ###
 * **Language:** 
 Python
 
 * **Mapper Input:**
-Input is entered by the user to enter search string and 'from date' to retrive tweets
-steps to executer mapper.py:
-step1- navigate to karri directory and run mapper.py file
-step 2- enter search string and date as prompted. After the successfull retrival of data, a message is prompted in the terminal
+Input is entered by the user to enter search string and 'from date' to retrive tweets <br />
+steps to execute mapper.py:
+- step1- navigate to karri directory and run mapper.py file
+- step 2- enter search string and date as prompted. After the successfull retrival of data, a message is prompted in the terminal
 * **Mapper Input/ Reducer Input:**
-The output of mapper will be sentiment and tweet text
+The output of mapper will be sentiment and tweet text.
 Navigate to Karri directory and open tweety.txt file to see the mapper output result. This is the sample of the result.
 
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/mapper_output_reducer_input.PNG)
@@ -289,12 +289,12 @@ Reducer takes the tweety.py file generated in the above step and performs the su
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/reducer_output.PNG)
 
 * **Chart Visualization:**
-I used bar chart to represent the reducer result. This chart shows the response of people on any topic we search for
+I used bar chart to represent the reducer result. This chart shows the response of people on any topic we search for. <br />
 
 ![alt text](https://github.com/Sumnimarana1/MapReduceProjectGroup4/blob/master/karri/images/chart.PNG)
 
 * **To Run:**<br />
-For this project, I used Twitter Streaming API for python- tweepy to download tweets related to 2 hashtags: #travel and #goplaces and collected 1 day data
+For this project, I used Twitter Streaming API for python- tweepy to download tweets related to 2 hashtags: #travel and #goplaces and collected 1 day data <br />
 Then used TextBlob- a sentiment analysis API for python to find the text sentiment.
 
 - In order to access Twitter Streaming API, we need to get 4 pieces of information from Twitter: API key, API secret, Access token and  Access token secret. Follow the steps below to get all 4 elements:
@@ -305,7 +305,7 @@ Then used TextBlob- a sentiment analysis API for python to find the text sentime
     •	In the next page, click on "API keys" tab, and copy your "API key" and "API secret".
     •	Scroll down and click "Create my access token", and copy your "Access token" and "Access token secret".
 
-- Install tweepy: Open command prompt as administrator and  install tweepy by using   ``` pip install tweepy ```  command
+- Install tweepy: Open command prompt as administrator and  install tweepy by using   ` pip install tweepy `  command
 
 - Install textblob: Open command prompt as administrator and  install tweepy by using   ``` pip install textblob ```  command
  
