@@ -268,15 +268,17 @@ If I were to do this again, I would do the maximum number of tweets by single pe
 
 
 
-### Krishna Veni:For each tweet find Sentiment and then calculate total number of positive, negative and neutral tweets ###
+### Krishna Veni: For each tweet find Sentiment and then calculate total number of positive, negative and neutral tweets ###
+
+In this project, I collected the stream of tweets related to a hashtag. User enters the hashtag and from date to retrive the data. Then I calculated
 * **Language:** 
 Python
 
 * **Mapper Input:**
 Input is entered by the user to enter search string and 'from date' to retrive tweets <br />
 steps to execute mapper.py:
-- step1- navigate to karri directory and run mapper.py file
-- step 2- enter search string and date as prompted. After the successfull retrival of data, a message is prompted in the terminal
+    - step1- navigate to karri directory and run mapper.py file
+    - step 2- enter search string and date as prompted. After the successfull retrival of data, a message is prompted in the terminal
 * **Mapper Input/ Reducer Input:**
 The output of mapper will be sentiment and tweet text.
 Navigate to Karri directory and open tweety.txt file to see the mapper output result. This is the sample of the result.
