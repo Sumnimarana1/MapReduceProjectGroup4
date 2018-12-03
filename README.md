@@ -299,25 +299,23 @@ I used bar chart to represent the reducer result. This chart shows the response 
 For this project, I used Twitter Streaming API for python- tweepy to download tweets related to 2 hashtags: #travel and #goplaces and collected 1 day data <br />
 Then used TextBlob- a sentiment analysis API for python to find the text sentiment.
 
-- In order to access Twitter Streaming API, we need to get 4 pieces of information from Twitter: API key, API secret, Access token and  Access token secret. Follow the steps below to get all 4 elements:
-    •	Create a twitter account if you do not already have one.
-    •	Go to https://apps.twitter.com/ and log in with your twitter credentials.
-    •	Click "Create New App"
-    •	Fill out the form, agree to the terms, and click "Create your Twitter application"
-    •	In the next page, click on "API keys" tab, and copy your "API key" and "API secret".
-    •	Scroll down and click "Create my access token", and copy your "Access token" and "Access token secret".
+    - In order to access Twitter Streaming API, we need to get 4 pieces of information from Twitter: API key, API secret, Access token and  Access token secret. Follow the steps below to get all 4 elements:
+        •	Create a twitter account if you do not already have one.
+        •	Go to https://apps.twitter.com/ and log in with your twitter credentials.
+        •	Click "Create New App"
+        •	Fill out the form, agree to the terms, and click "Create your Twitter application"
+        •	In the next page, click on "API keys" tab, and copy your "API key" and "API secret".
+        •	Scroll down and click "Create my access token", and copy your "Access token" and "Access token secret".
 
-- Install tweepy: Open command prompt as administrator and  install tweepy by using   ` pip install tweepy `  command
-
-- Install textblob: Open command prompt as administrator and  install tweepy by using   ``` pip install textblob ```  command
- 
-- Clone the Repo
-- Open the folder **C:\44564\MapReduceProjectGroup4\karri**
-- Open mapper.py using anycode editor and add twitter credentials.
-- Right Click anywhere in the folder area and click on **Git Bash here** or **Open Command Window here as Administrator**.
-- run ```python mapper.py```
-- run ```python reducer.py```
-- Output is in the file - **senti.csv**
+    - Install tweepy: Open command prompt as administrator and  install tweepy by using   ` pip install tweepy `  command
+    - Install textblob: Open command prompt as administrator and  install tweepy by using   ``` pip install textblob ```  command
+    - Clone the Repo
+    - Open the folder **C:\44564\MapReduceProjectGroup4\karri**
+    - Open mapper.py using anycode editor and add twitter credentials.
+    - Right Click anywhere in the folder area and click on **Git Bash here** or **Open Command Window here as Administrator**.
+    - run ```python mapper.py```
+    - run ```python reducer.py```
+    - Output is in the file - **senti.csv**
 
 * **Challenges:** <br />
 Retrieving tweets was easy task as I was working on it since long time. I spent most of my time in IO file part. I never worked with reading and writing files in python. Initially i started used csv files but to know how to access specific column, converting it to string and other related things was taking time.So i proceed with text files.
