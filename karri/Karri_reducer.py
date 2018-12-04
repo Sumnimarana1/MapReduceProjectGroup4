@@ -3,13 +3,14 @@
 
 import csv
 # open mapper output for reducer input
-mapper_output = open("sorted_tweety.txt", "r")
+mapper_output = open("tweety.txt", "r")
+#mapper_output = open("sorted_tweety.txt", "r")
 
 positive_counter = 0
 negative_counter = 0
 neutral_counter = 0
 
-# for each line in teh file check the first value which is sentiment and increment respective counter
+# for each line in the file check the first value which is sentiment and increment respective counter
 for line in mapper_output:
     data = line.strip().split(',')
     if len(data) != 2:
