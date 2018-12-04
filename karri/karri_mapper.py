@@ -5,10 +5,7 @@ import tweepy
 from textblob import TextBlob
 
 # input your twitter credentials here
-consumer_key = '****'
-consumer_secret = '***'
-access_token = '*****-'
-access_token_secret = '****'
+
 
 # authenticate and set credentials
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)

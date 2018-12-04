@@ -3,7 +3,7 @@
 
 import csv
 # open mapper output for reducer input
-mapper_output = open("tweety.txt", "r")
+mapper_output = open("sorted_tweety.txt", "r")
 
 positive_counter = 0
 negative_counter = 0
